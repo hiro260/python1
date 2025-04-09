@@ -11,6 +11,9 @@ class Truck(Car):
         self.current_load = current_load
         self.max_load = max_load
 
+    def gas(self):
+        pass
+
     def load(self, new_load):
         if self.current_load + new_load > self.max_load:
             print(("overload, but you can overload"))
