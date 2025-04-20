@@ -1,0 +1,11 @@
+Naoko-su (TBD)				
+Hiro-pa (TBD)				
+Yuki-(TBD)				
+	ad	08/31/2022		
+		nsanda777		
+		1	2	3
+	fee	$50 	$50 	$40/60
+	location	PA	PA	Sara
+	subjects	math&sci	math&sci	chem&physics
+	category	service	service	service
+		yes	yes	yes
