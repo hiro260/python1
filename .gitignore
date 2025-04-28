@@ -1,2 +1,4 @@
 .venv/
 .vscode/
+test1/*.png
+test1/*.csv
