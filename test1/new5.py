@@ -51,23 +51,48 @@ for wafer in wafer_unique:
 #ax.legend()
 ax.legend(loc='upper left', bbox_to_anchor=(1, 1), title='Legend')
 plt.savefig('MeasB.png')
-plt.show()
+#plt.show()
 
-quit()
-plt.figure()
-site1_data = df[(df['Wafer'] == 'W1') & (df['Site'] == 'N1N1')]
-site2_data = df[df['Site'] == 'N1N2']
-site3_data = df[df['Site'] == 'N1N3']
-plt.plot(site1_data['Frc'], site1_data['Meas1'], label="site1 Meas1", linestyle='-', color='r')
+# #quit()
+# plt.figure()
+# site1_data = df[(df['Wafer'] == 'W1') & (df['Site'] == 'N1N1')]
+# site2_data = df[df['Site'] == 'N1N2']
+# site3_data = df[df['Site'] == 'N1N3']
+# plt.plot(site1_data['Frc'], site1_data['Meas1'], label="site1 Meas1", linestyle='-', color='r')
 
-plt.show()
+# plt.show()
 
 
 
-quit()
+#quit()
 list_group = ['Wafer', 'Frc']
 list_meas = ['Meas1', 'Meas2', 'Meas3']
 df_med = df.groupby(list_group).median(list_meas)
 print(df_med)
+#df_med.to_csv(load_file + '_med.csv', index=True)
+df_med.reset_index(level=['Frc','Wafer'] , inplace=True)
 
-df_med.to_csv(load_file + '_med.csv', index=True)
+print(df_med)
+df_med.to_csv(load_file + '_med2.csv', index=True)
+print(df_med.dtypes)
+
+colors = ['r', 'b']
+linestyles = ['-', '--']
+fig, ax = plt.subplots(figsize=(10, 6))
+
+for i, wafer in enumerate(wafer_unique):
+    plot_data = df_med[(df_med['Wafer'] == wafer)]
+    plot_data.plot(
+        x='Frc',
+        y='Meas1',
+        kind="line", 
+        ax=ax,  
+        label=f'Wafer {wafer}',
+        color=colors[i],
+        linestyle=linestyles[i],
+        )
+#ax.legend()
+ax.legend(loc='upper left', bbox_to_anchor=(1, 1), title='Legend')
+plt.savefig("med_meas.png")
+plt.show()
+
