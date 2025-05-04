@@ -5,3 +5,4 @@ test1/*.csv
 __pycache__/
 test2/__pycache__/
 myproject/__pycache__/
+my_package/__pycache__/
