@@ -6,3 +6,7 @@ __pycache__/
 test2/__pycache__/
 myproject/__pycache__/
 my_package/__pycache__/
+.csv
+.xlsx
+README.md
+.html
