@@ -5,6 +5,7 @@ from my_package.script3 import function6
 def function1(w, x, y, z):
     return w + x + y + z
 
+
 def main():
     a = 10
     b = 3
@@ -21,8 +22,6 @@ def main():
 
     result6 = function6(a, b)
     print(result6)
-
-
 
 
 if __name__ == "__main__":
