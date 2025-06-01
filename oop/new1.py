@@ -1,4 +1,4 @@
-fruits = ['apple', 'peach', 'grapes', 'banana']
+fruits = ["apple", "peach", "grapes", "banana"]
 
 # for fruit in fruits:
 #     print(fruit)
@@ -24,7 +24,7 @@ fruits = ['apple', 'peach', 'grapes', 'banana']
 # print([i ** 2 for i in range(10) if i % 2 == 0])
 
 data_of_birth = (1990, 2, 3)
-#data_of_birth[0] =1999
+# data_of_birth[0] =1999
 
 print(data_of_birth)
 
